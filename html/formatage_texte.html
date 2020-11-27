@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>formatage_texte</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+    <style type="text/css">
+        /*on gère le style des balise span avec l'attribut id et la valuer précise souligne*/
+
+
+        @font-face {
+            font-family: "Roboto Light";
+            src: url("../css/police/Roboto-Light.ttf") format("truetype");
+        }
+
+        span[id="souligne"] {
+            text-decoration: underline
+        }
+
+        /*on gère le style des balise span avec l'attribut id et la valuer précise gras*/
+        span[id="gras"] {
+            font-weight: bold
+        }
+
+        /*on gère le style des balise p avec l'attribut id et la valuer précise blue*/
+        p[id="blue"] {
+            color: blue
+        }
+
+        /*on gère le style des balise li avec l'attribut id et la valuer précise aligne qui permet de mettre ligne de text au niveau de la liste et d'enlever la puce*/
+        li[id="aligne"] {
+            list-style: none;
+            margin-left: -16px
+        }
+
+        /*on gère le style des li p pour mettre de points plein */
+        li {
+            list-style: disc;
+        }
+
+        /*on gère le style de la classe impace pour changer la police*/
+        .impacte {
+            font-family: impact;
+        }
+
+        /*applique la police a tout le body*/
+        /*body {
+            font-family: "Roboto Light";*/
+        }
+
+        /*barre la ligne souhaité*/
+        span[id="barre"] {
+            text-decoration: line-through
+        }
+
+        /*crée une liste au dessu*/
+        span[id="dessu"] {
+            text-decoration: overline
+        }
+
+        /*crée une liste au dessu*/
+        span[id="clignote"] {
+            text-decoration: blink
+        }
+
+        .imageflottante {
+            float: left;
+        }
+
+        p[id="p1"] {
+            color: #00FF00
+        }
+
+        /*body {
+            background-color: black;
+        }*/
+
+        body {
+            background: url(../images/4saison.png) fixed no-repeat top right,url(../images/caramini.png)fixed;
+
+        }
+        p[id="p2"] {
+            background: url(../images/caramini.png) red;
+            opacity: 50%;
+
+
+        }
+
+        p[id="p3"] {
+            background: url(../images/caramini.png); 
+                background-color: rgba(255,0, 0, 0.5; );
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr>
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png">
+        <h1>GDESIGN</h1>
+    </header>
+    <hr color="">
+    <hr>
+    <p id="blue"><span id="gras">Formatage du texte</span></p>
+    <span id="gras">La taille</span>
+    <section>
+        Propiété CSS <span id="gras">font-size</span>
+        <ul>
+            <li><span id="souligne">Exprimée en taille absolue</span> : en pixels(px),centimètres,milimètres...</li>
+            <li><span id="souligne">Exprimée en taille relative</span> : en pourcentage,<span id="gras">"em"</span> ou "ex", cette technique a l'avantage d'être plus souple.Elle s'adapte plus facilement aux de taille des visiteur . </li>
+            <ul>
+                <li><span>xx-small:minuscule;</span></li>
+                <li><span>x-small:très petit;</span></li>
+                <li><span>small:petit;</span></li>
+                <li><span>medium:moyen;</span></li>
+                <li><span>large:grand;</span></li>
+                <li><span>x-large:très grand;</span></li>
+                <li><span>xx-large:gigantesque;</span></li>
+                <li id="aligne">Uniquement 7 tailles.</li>
+            </ul>
+        </ul>
+
+        <span style="margin-left: 20px">Préférez mes tailles exprimées en em</span>
+        <ul style="margin-top: -1px">
+            <li>Si vous écrivez1em, le texte a une taille normale</li>
+            <li>Si vous voulez grossir le texte, vous pouvez inscrire une valuer </li>
+            <li>Si vous voulez réduire le texte, inscrivez une valeur inférieur à 1,comme0.8em.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>La police</h1>
+        <p class="impacte">police 1</p>
+        <p class="policeperso">police 2</p>
+        <p>police 3</p>
+        <p>police 4</p>
+    </section>
+    <section>
+        <h2>Italique, gras et souligné</h2><br>
+        <span id="souligne">souligné</span><br>
+        <span id="barre">barré</span><br>
+        <span id="dessu">ligne au-dessus</span><br>
+        <span id="clignote">clignotant</span><br>
+        <span>none</span>
+    </section>
+    <section>
+        <h2>Les flottants</h2>
+        <!--<p><img src="../images/firefox.png" class="imageflottante" alt="Image Flottante">
+            Ce texte est écrit sous l'image flottante.*/
+        </p>
+    </section>-->
+        <section>
+            <h2>la couleur et le fond</h2>
+            <input type="color">
+            <p id="p1">Je me penche attendri sur les bois et les eaux,
+                Rêveur, grand-père aussi des fleurs et des oiseaux ;
+                J'ai la pitié sacrée et profonde des choses ;
+                J'empêche les enfants de maltraiter les roses ;
+                Je dis : N'effarez point la plante et l'animal ;
+                Riez sans faire peur, jouez sans faire mal.
+                Jeanne et Georges, fronts purs, prunelles éblouies,
+                Rayonnent au milieu des fleurs épanouies ;
+                J'erre, sans le troubler, dans tout ce paradis ;
+                Je les entends chanter, je songe, et je me dis
+                Qu'ils sont inattentifs, dans leurs charmants tapages,
+                Au bruit sombre que font en se tournant les pages
+                Du mystérieux livre où le sort est écrit,
+                Et qu'ils sont loin du prêtre et près de Jésus-Christ.</p>
+        </section>
+        
+        <section>
+            <h2>Fond du paragraphe en rouge et a moitier transparent</h2>
+            <p id="p3">Je me penche attendri sur les bois et les eaux,
+                Rêveur, grand-père aussi des fleurs et des oiseaux ;
+                J'ai la pitié sacrée et profonde des choses ;
+                J'empêche les enfants de maltraiter les roses ;
+                Je dis : N'effarez point la plante et l'animal ;
+                Riez sans faire peur, jouez sans faire mal.
+                Jeanne et Georges, fronts purs, prunelles éblouies,
+                Rayonnent au milieu des fleurs épanouies ;
+                J'erre, sans le troubler, dans tout ce paradis ;
+                Je les entends chanter, je songe, et je me dis
+                Qu'ils sont inattentifs, dans leurs charmants tapages,
+                Au bruit sombre que font en se tournant les pages
+                Du mystérieux livre où le sort est écrit,
+                Et qu'ils sont loin du prêtre et près de Jésus-Christ.
+        </section>
+
+
+
+
+
+        <hr>
+        <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+        <hr>
+</body>
+
+</html>

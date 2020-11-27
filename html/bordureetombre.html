@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Bordures et ombres</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+    <style>
+        /*p[id="p1"] {
+            border-width: 10px;
+            border-style: groove;
+            border-color: blueviolet
+        }*/
+
+        h2 {
+            text-decoration: underline
+        }
+
+        span[id="gras"] {
+            font-weight: bold
+        }
+
+        span[id="ombre"] {
+            box-shadow: 1px 1px 15px #ff00ff;
+        }
+
+        body {
+            background: black;
+            color: white
+        }
+
+        p[id="tombre"] {
+            box-shadow: 1px 1px 15px #ff00ff;
+            text-shadow: 10px 1px 15px rgb(00 255 00)
+        }
+
+        /* le lien plus souligner en rouge et en itlaique*/
+        a {
+            text-decoration: none;
+            color: red;
+            font-style: italic;
+        }
+
+        /*au survole le lien sera vers et souligner*/
+        a:hover {
+            text-decoration: underline;
+            color: green;
+        }
+
+        a:visited {
+            color: purple
+        }
+
+        a:link {
+            color: red;
+        }
+
+        .external:link {
+            background-color: lightblue;
+        }
+
+        a:active[id="active"] {
+            color: yellow
+        }
+
+        a:focus[id="focus"] {
+            color: blueviolet
+        }
+
+        input {
+            border-width: 3px;
+        }
+
+        input:optional {
+            border-color: #008000;
+        }
+
+        input:required {
+            border-color: #800000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr color="">
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png">
+        <h1>GDESIGN</h1>
+    </header>
+    <hr color="">
+    <hr color="">
+    <!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
+    <h1>Bordure et ombre</h1>
+    <section>
+        <header>
+            <h2>Les bordures standard</h2>
+        </header>
+        <h3>Les propriétés border</h3>
+        <span>
+            <ul>
+                <li>Border-width : largeur en px</li>
+                <li>Border-style :
+                    <ul>
+                        <li style="border-style: none">none : pas de bordure (par défaut) ;</li><br>
+                        <li style="border: solid blue">solid : un trait simple ;</li><br>
+                        <li style="border-style: dotted">dotted : pointillés ;</li><br>
+                        <li style="border-style: dashed">dashed : tirets ;</li><br>
+                        <li style="border:rgb(255 60 50) double ">double : bordure double ;</li><br>
+                        <li style="border-style: groove">groove : en relief ;</li><br>
+                        <li style="border-style: ridge">ridge : autre effet relief ;</li><br>
+                        <li style="border-style: inset">inset : effet 3D global enfoncé ;</li><br>
+                        <li style="border-style: outset">outset : effet 3D global surélevé.</li><br>
+                    </ul>
+                </li>
+                <li style="border: solid #00ff00">Border-color, se servir des couleurs comme vu pour le background.</li>
+                <p>(La super propriété border vous facilitera la tâche)</p>
+            </ul>
+        </span>
+    </section>
+    <section>
+        <h2>Les bordures partielles</h2>
+        <span>
+            <ul>
+                <li style="border:solid black;border-top: double yellow">border-top : bordure du haut ;</li><br>
+                <li style="border:double blue; border-bottom: inset green">border-bottom : bordure du bas ;</li><br>
+                <li style="border:ridge silver; border-left: inset purple">border-left : bordure de gauche ;</li><br>
+                <li style="border:groove blue; border-bottom: outset red">border-right : bordure de droite.</li><br>
+            </ul>
+        </span>
+    </section>
+    <section>
+        <h2>Bordures arrondies</h2>
+        <p style="border:solid;border-radius: 10px 100px / 120px;">
+            La propriété border-radius : indiquer l’importance de l’angle en pixels.
+            On peut aussi préciser la forme de l'arrondi pour chaque coin.
+            Il est possible d'affiner l'arrondi des angles en créant des courbes elliptiques. Dans ce cas,
+            il faut indiquer deux valeurs séparées par /.
+        </p>
+    </section>
+    <section>
+        <h2>Les ombres</h2>
+        <p>2 types d'ombres:</p>
+        <ul>
+            <li>Les ombres des boites;</li>
+            <li>Les ombres du texte.</li>
+        </ul>
+    </section>
+    <section>
+        <span id="gras">Box-shadow </span><span>les ombres des boites</span>
+        <span>La porpiété box-shadow s'applique à tout le bloc et prend quatre valeurs dans l'ordre suivant</span>
+        <ol>
+            <li>Le décalage horizontal de l'ombre</li>
+            <li>Le décalage vertical de l'ombre</li>
+            <li>l'adoucisssement du dégradé</li>
+            <li>la couleur de l'ombre</li>
+        </ol>
+        <span id="ombre">Par exemple, pour une ombre noire de 6 pixel sans adoucissement, on écrira :</span>
+    </section>
+    <section>
+        <h2>Les text-shadow</h2>
+        <p id="tombre">Je me penche attendri sur les bois et les eaux,<br>
+            Rêveur, grand-père aussi des fleurs et des oiseaux ;<br>
+            J'ai la pitié sacrée et profonde des choses ;<br>
+            J'empêche les enfants de maltraiter les roses ;<br>
+            Je dis : N'effarez point la plante et l'animal ;<br>
+            Riez sans faire peur, jouez sans faire mal.<br>
+            Jeanne et Georges, fronts purs, prunelles éblouies,<br>
+            Rayonnent au milieu des fleurs épanouies ;<br>
+            J'erre, sans le troubler, dans tout ce paradis ;<br>
+            Je les entends chanter, je songe, et je me dis<br>
+            Qu'ils sont inattentifs, dans leurs charmants tapages,<br>
+            Au bruit sombre que font en se tournant les pages<br>
+            Du mystérieux livre où le sort est écrit,<br>
+            Et qu'ils sont loin du prêtre et près de Jésus-Christ.<br></p>
+    </section>
+    <section>
+        <header>
+            <h2>Création d'apparences dynamique</h2>
+        </header>
+        <div>
+            <p>Une apparences dynamique est une apparences qui vas évoluer grace aux pseudo-format cela peut s'effectuer lors:
+            <ul>
+                <li>du survole d'un éléments</li>
+                <li> d'un focus</li>
+                <li>un clique</li>
+                <li>quand un lien a été consulté</li>
+            </ul>
+        </div>
+        <h3>Pseudo-format:Hover au survol (Exemple de comportement sur un lien.)</h3>
+        <a href="https://www.google.fr/" target="_blank">Lien vers google</a>
+        <p>Et si on allait voir
+            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/">
+                un peu de JavaScript ?
+            </a>
+        </p>
+        <p>Sinon, on peut continuer à se cultiver sur CSS autre part
+            <a class="external" href="https://css-tricks.com/">
+                comme CSS Tricks.</a><br>
+            <a id="active" href="https://www.google.fr/" target="_blank">Lien vers google</a><br>
+            <a id="focus" href="https://www.google.fr/" target="_blank">Lien vers google</a>
+        </p>
+    </section>
+    <section>
+        <form>
+            <label for="url-input">Tapez une URL :</label>
+            <input type="url" id="url-input">
+            <br>
+            <br>
+            <label for="email-input">Tapez une adresse courriel :</label>
+            <input type="email" id="email-input" required>
+        </form>
+    </section>
+
+
+
+
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body>
+
+</html>
