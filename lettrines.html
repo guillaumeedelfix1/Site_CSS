@@ -20,7 +20,18 @@ Indique la version de HTML utilisé: HTML5
     <!--Afficher une image dans l'onglet de sa page-->
     <link rel="icon" type="image/x-icon" href="images/caramini.jpg" />
     <style>
-        div[id="base"] {
+        @font-face {
+            font-family: "NerkoOne Regular";
+            src: url("css/police/NerkoOne-Regular.ttf") format("truetype");
+        }
+
+         body {
+            font-family: "NerkoOne Regular";
+        }
+            
+       
+
+        div {
             border: solid;
             width: 400px;
             border-radius: 40px;
@@ -28,17 +39,23 @@ Indique la version de HTML utilisé: HTML5
             margin: auto
         }
 
-        p::first-letter {
+        span::first-letter {
             font-size: 1.2em;
             color: red;
+        }
+
+        span {
+            display: block;
+        }
+
+        div::first-line {
+            font-weight: bold;
 
         }
 
-        p {
-            margin-top: 0px;
-            margin-bottom: 0px;
+        div[id="ligne1"] {
+            border: none
         }
-
     </style>
 </head>
 
@@ -52,14 +69,14 @@ Indique la version de HTML utilisé: HTML5
     <hr color="">
     <hr>
     <!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
-    <div id="base">
-        <h3>Épitaphe d'un paresseux</h3>
-        <p>Jean s'en alla comme il était venu,</p>
-        <p>Mangea le fonds avec le revenu,</p>
-        <p>Tint les trésors chose peu nécessaire.</p>
-        <p>Quant à son temps, bien le sut dispenser :</p>
-        <p>Deux parts en fit, dont il soulait passer</p>
-        <p>L'une à dormir et l'autre à ne rien faire.</p><br>
+    <div>
+        <div id="ligne1">Épitaphe d'un paresseux</div>
+        <span>Jean s'en alla comme il était venu,</span>
+        <span>Mangea le fonds avec le revenu,</span>
+        <span>Tint les trésors chose peu nécessaire.</span>
+        <span>Quant à son temps, bien le sut dispenser :</span>
+        <span>Deux parts en fit, dont il soulait passer</span>
+        <span>L'une à dormir et l'autre à ne rien faire.</span>
     </div>
 
     <br><a href="./index.html">lien vers l'accueil</a><br>
@@ -67,6 +84,4 @@ Indique la version de HTML utilisé: HTML5
     <hr>
     <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
     <hr>
-</body>
-
-</html>
+</body></html>
