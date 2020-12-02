@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>tableau</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="images/caramini.jpg" />
+    <style>
+        table {
+            width: 100%
+        }
+
+        .titre {
+            color: white
+        }
+        .gris1{
+            color: white;
+            background-color:#999690
+        }
+        .gris2{
+            background-color: #d6d3ce;
+        }
+        .gris3{
+           background-color: #c6c3bd 
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr>
+    <hr color="">
+    <header id="haut"><img src="images/logomini.png">
+        <h1>GDESIGN</h1>
+    </header>
+    <hr color="">
+    <hr>
+    <!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
+    <h2 id="Tbl3">Tableau 3</h2>
+    <table rules="all" cellpadding="5px">
+        <tr style="background-color:#5d625c">
+            <td colspan="3" align="center" class="titre">Exemple de tableau mis en forme</td>
+        </tr>
+        <tr class="gris1">
+            <th align="left">Description</th>
+            <th>Qte</th>
+            <th>Total</th>
+        </tr>
+        <tr class="gris2">
+            <td>L'ill</td>
+            <td align="right">1</td>
+            <td align="right">28</td>
+        </tr>
+        <tr class="gris3">
+            <td>Le Rhin</td>
+            <td align="right">1</td>
+            <td align="right">-20</td>
+        </tr>
+        <tr class="gris2">
+            <td>Danube</td>
+            <td align="right">1</td>
+            <td align="right">21</td>
+        </tr>
+        <tr class="gris3">
+            <td>Pô</td>
+            <td align="right">1</td>
+            <td align="right">26</td>
+        </tr>
+        <tr class="gris2">
+            <td>Espelette</td>
+            <td align="right">1</td>
+            <td align="right">-12</td>
+        </tr>
+        <tr class="gris3">
+            <td>Madoukou</td>
+            <td align="right">1</td>
+            <td align="right">32</td>
+        </tr>
+        <tr class="gris2">
+            <td>Canal de la Marne</td>
+            <td align="right">1</td>
+            <td align="right">470</td>
+        </tr>
+        <tr class="gris3">
+            <td>Bruges</td>
+            <td align="right">1</td>
+            <td align="right">49</td>
+        </tr>
+        <tr class="gris2">
+            <td>L'aar</td>
+            <td align="right">1</td>
+            <td align="right">39</td>
+        </tr>
+        <tr class="gris1">
+            <td colspan="2" align="right">10</td>
+            <td align="right">663</td>
+        </tr>
+
+    </table>
+    <a href="#haut">Retourner En Haut de la page</a>
+
+
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body>
+
+</html>
