@@ -23,16 +23,16 @@ Indique la version de HTML utilisé: HTML5
         .container {
             display: flex;
             /*flex-direction: row;*/
-            flex-grow: 2;
         }
 
+        /*test order changment de place*/
         .container>div1 {
             order: 10;
             border: black solid;
             /*flex-grow: 1;*/
             /*ne fontctionne pas avec flex direction*/
             flex-grow: 2;
-            flex-wrap: wrap;
+
         }
 
         .container>div2 {
@@ -104,10 +104,46 @@ Indique la version de HTML utilisé: HTML5
             /*ne fontctionne pas avec flex direction*/
             flex-grow: 2;
         }
-        .container2{
+
+        .wrap {
+            border: solid green;
             display: flex;
             flex-wrap: wrap;
         }
+
+        .shrink {
+            border: solid pink;
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        .flow {
+            border: solid blue;
+            display: flex;
+            flex-flow: wrap-reverse column-reverse;
+        }
+
+        .justifie {
+            border: solid yellow;
+            display: flex;
+            justify-content: flex-end
+        }
+
+        .aligne {
+            border: solid red;
+            display: flex;
+            align-items: flex-end
+        }
+
+        .align-cont {
+            height: 200px;
+            width: 240px;
+            border: solid gold;
+            display: flex;
+            align-content: space-between;
+            flex-flow: wrap;
+        }
+
     </style>
 </head>
 
@@ -133,68 +169,84 @@ Indique la version de HTML utilisé: HTML5
         <div10>10</div10>
     </div>
 
-    <div>
-        <div>Art poétique
+    <span>
+        <span>Art poétique
             Paul Verlaine
             De la musique avant toute chose,
             Et pour cela préfère l’Impair
             Plus vague et plus soluble dans l’air,
-            Sans rien en lui qui pèse ou qui pose.</div>
-
-        <div>Il faut aussi que tu n’ailles point
+            Sans rien en lui qui pèse ou qui pose.</span>
+        <span>Il faut aussi que tu n’ailles point
             Choisir tes mots sans quelque méprise :
             Rien de plus cher que la chanson grise
-            Ou l’Indécis au Précis se joint.</div>
-
-        <div>  C’est de beaux yeux derrière des voiles,
+            Ou l’Indécis au Précis se joint.</span>
+        <span class="justifie"> C’est de beaux yeux derrière des voiles,
             C’est le grand jour tremblant de midi ;
             C’est par un ciel d’automne attiédi,
-            Le bleu fouillis des claires étoiles !</div>
-
-        <div class="container2">Car nous voulons la Nuance encor,
+            Le bleu fouillis des claires étoiles !</span>
+        <span class="wrap">Car nous voulons la Nuance encor,
             Pas la couleur, rien que la Nuance !
             Oh ! la nuance seule fiance
-            Le rêve au rêve et la flûte au cor !</div>
-
-        <div>Fuis du plus loin la Pointe assassine,
+            Le rêve au rêve et la flûte au cor !</span>
+        <span>Fuis du plus loin la Pointe assassine,
             L’Esprit cruel et le Rire impur,
             Qui font pleurer les yeux de l’Azur,
-            Et tout cet ail de basse cuisine !</div>
-
-        <div>Prend l’éloquence et tords-lui son cou !
+            Et tout cet ail de basse cuisine !</span>
+        <span>Prend l’éloquence et tords-lui son cou !
             Tu feras bien, en train d’énergie,
             De rendre un peu la Rime assagie.
-            Si l’on y veille, elle ira jusqu’où ?</div>
-
-        <div>Ô qui dira les torts de la Rime !
+            Si l’on y veille, elle ira jusqu’où ?</span>
+        <span class="wrap">Ô qui dira les torts de la Rime !
             Quel enfant sourd ou quel nègre fou
             Nous a forgé ce bijou d’un sou
-            Qui sonne creux et faux sous la lime ?</div>
-
-        <div>De la musique encore et toujours !
+            Qui sonne creux et faux sous la lime ?</span>
+        <span>De la musique encore et toujours !
             Que ton vers soit la chose envolée
             Qu’on sent qui fuit d’une âme en allée
-            Vers d’autres cieux à d’autres amours.</div>
-
-        <div>Que ton vers soit la bonne aventure
+            Vers d’autres cieux à d’autres amours.</span>
+        <span>Que ton vers soit la bonne aventure
             Éparse au vent crispé du matin
             Qui va fleurant la menthe et le thym…
-            Et tout le reste est littérature.</div>
-
-        <div>Paul Verlaine, Jadis et Naguère (1885)</div>
+            Et tout le reste est littérature.</span>
+        <span class="justifie">Paul Verlaine, Jadis et Naguère (1885)</span>
+        <hr color="">
+    </span>
+    <div class="shrink">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     </div>
-
-
-
-
-
-
-
-
-
     <hr color="">
-    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <span class="flow">
+        <span>Car nous voulons la Nuance encor,
+            Pas la couleur, rien que la Nuance !
+            Oh ! la nuance seule fiance
+            Le rêve au rêve et la flûte au cor !</span>
+        <span>Ô qui dira les torts de la Rime !
+            Quel enfant sourd ou quel nègre fou
+            Nous a forgé ce bijou d’un sou
+            Qui sonne creux et faux sous la lime ?</span>
+    </span>
     <hr color="">
+    <span class="align-cont">
+        <span>Car nous voulons la Nuance encor,
+            Pas la couleur, rien que la Nuance !
+            Oh ! la nuance seule fiance
+            Le rêve au rêve et la flûte au cor !</span>
+        <span>Ô qui dira les torts de la Rime !
+            Quel enfant sourd ou quel nègre fou
+            Nous a forgé ce bijou d’un sou
+            Qui sonne creux et faux sous la lime ?</span>
+        <span>
+     </span>
+        <hr color="">
+
+
+
+
+
+
+
+
+
+        
 </body>
 
 </html>
