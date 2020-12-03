@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="images/caramini.jpg" />
+    <style>
+        #ul1 {
+            list-style-image: url('images/echec/pion.png');
+        }
+
+        #ul1 li:nth-child(3) {
+            list-style-image: url('images/echec/bpion.png')
+        }
+
+        ol[id="1"] {
+            list-style-type: upper-roman
+        }
+
+        #ul2 {
+            list-style: none
+        }
+
+        #ul2 li::before {
+            content: "->";
+            color: chartreuse
+        }
+        #olstyled1{
+            counter-reset:li;
+        }
+        #olstyled1 > li{
+            position: relative;
+            margin: 0 0 6px 2em;
+            padding: 4px 4em;
+            list-style: none;
+            border-top:1px solid #000;
+            background: #AFA;
+            width:150px;
+        }
+        #olstyled1 > li:before{
+            content:counter(li);
+            counter-increment:li;
+            margin: 0 0 5px -4em;
+            padding: 4px 1em;
+            background: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr color="">
+    <header id="haut"><img src="images/logomini.png">
+        <h1>GDESIGN</h1>
+    </header>
+    <hr color="">
+    <ul id="ul1">
+        <li>Anniversaire</li>
+        <li>fête</li>
+        <li>Noël</li>
+        <li>Nouvel An</li>
+    </ul>
+    <ol id="1">
+        <li>Anniversaire</li>
+        <li>fête</li>
+        <li>Noël</li>
+        <li>Nouvel An</li>
+    </ol>
+    <ul id="ul2">
+        <li>Anniversaire</li>
+        <li>fête</li>
+        <li>Noël</li>
+        <li>Nouvel An</li>
+    </ul>
+    <ol id="olstyled1">
+        <li>Anniversaire</li>
+        <li>fête</li>
+        <li>Noël</li>
+        <li>Nouvel An</li>
+
+    </ol>
+
+
+
+
+
+
+    <hr color="">
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr color="">
+</body>
+
+</html>
