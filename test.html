@@ -8,6 +8,7 @@ Indique la version de HTML utilisé: HTML5
 <!--Balise paires/ Impaires-->
 
 <html>
+
 <head>
     <!--en tête de la pâge-->
     <title>Modele</title>
@@ -19,10 +20,58 @@ Indique la version de HTML utilisé: HTML5
     <!--Afficher une image dans l'onglet de sa page-->
     <link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
     <style>
-        p::first-letter {
-            color: red;
-            font-size: 130%;
+        .flex-container {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 1px solid silver;
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+            width: 50%
         }
+
+        .nowrap {
+            -webkit-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .wrap li {
+            background: gold;
+        }
+
+        .wrap-reverse {
+            -webkit-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse;
+        }
+
+        .wrap-reverse li {
+            background: deepskyblue;
+        }
+
+        .flex-item {
+            background: tomato;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -35,32 +84,43 @@ Indique la version de HTML utilisé: HTML5
     </header>
     <hr color="">
     <hr>
-    <!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor
-        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy amet.</p>
-    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-        aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-        esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-        nulla facilisi.</p>
-    <p>-The beginning of a special punctuation mark.</p>
-    <p>_The beginning of a special punctuation mark.</p>
-    <p>"The beginning of a special punctuation mark.</p>
-    <p>'The beginning of a special punctuation mark.</p>
-    <p>*The beginning of a special punctuation mark.</p>
-    <p>#The beginning of a special punctuation mark.</p>
-    <p>「特殊的汉字标点符号开头。</p>
-    <p>《特殊的汉字标点符号开头。</p>
-    <p>“特殊的汉字标点符号开头。</p>
+    <ul class="flex-container nowrap">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+        <li class="flex-item">7</li>
+        <li class="flex-item">8</li>
+    </ul>
 
+    <ul class="flex-container wrap">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+        <li class="flex-item">7</li>
+        <li class="flex-item">8</li>
+    </ul>
 
-
+    <ul class="flex-container wrap-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+        <li class="flex-item">7</li>
+        <li class="flex-item">8</li>
+    </ul>
 
 
     <hr>
     <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
     <hr>
-</body></html>
+</body>
+
+</html>
