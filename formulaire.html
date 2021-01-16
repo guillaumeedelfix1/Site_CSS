@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Formuliare</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="images/caramini.jpg" />
+    <style>
+        table {
+            border: solid black;
+            width: 100%
+        }
+
+        td[id="col1"] {
+            width: 15%;
+        }
+
+        td[id="col2"] {
+            width: 25%;
+        }
+
+        td[id="ligne1a6"] {
+            height: 40px;
+        }
+
+        td[id="ligne7"] {
+            height: 80px;
+        }
+
+        input[id="adresse"] {
+            height: 100%:
+        }
+    </style>
+</head>
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr color="black">
+    <header id="haut"><img src="images/logomini.png">
+        <h1>GDESIGN</h1>
+    </header>
+    <table rules="all" cellpadding="5px">
+        <hr color="black">
+        <tr id="ligne1a6">
+            <td id="col1"><label for="nom">Nom:</label></td>
+            <td id="col2"><input type="text" name="nom" id="nom"></td>
+            <td colspan="3" id="col2"><label for="Adresse">Adresse</label></td>
+        </tr>
+        <tr id="ligne1a6">
+            <td><label for="prenom">Prenom:</label></td>
+            <td><input type="text" name="prenom" id="prenom"></td>
+            <td colspan="3" rowspan="2"><input type="text" name="adresse" id="adresse">
+        </tr>
+        <tr id="ligne1a6">
+            <td id="col1"><label for="sex">Sexe</label></td>
+            <td id="col2">H:<input type="radio" name="sex" id="sex" value="H">F:<input type="radio" name="sex" id="sex" value="F"></td>
+        </tr>
+        <tr id="ligne1a6">
+            <td id="col1" colspan="2"><label for="situ">Situation familiale</label></td>
+            <td id="col2" colspan="3"><label for="aniv">Date de naissance</label></td>
+            
+        </tr>
+        <tr id="ligne1a6">
+            <td id="col1" colspan="2">
+				<select type="" value="" name="situation" size="3">
+					<option value="BAC">Célibataire</option>
+					<option value="BTS">Marié</option>
+					<option value="DUT">Divorcé</option>
+					<option value="BEP">Veuf</option>
+				</select></td>
+            
+            <td>cl3l5</td>
+            <td>cl4l5</td>
+            <td>cl5l5</td>
+        </tr>
+        <tr id="ligne1a6">
+            <td id="col1"></td>
+            <td id="col2">cl2l5</td>
+            <td>cl3l5</td>
+            <td>cl4l5</td>
+            <td>cl5l5</td>
+        </tr>
+        <tr id="ligne7">
+            <td id="col1">cl1l5</td>
+            <td id="col2">cl2l5</td>
+            <td>cl3l5</td>
+            <td>cl4l5</td>
+            <td>cl5l5</td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+        <hr color="black">
+        <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+        <hr color="black ">
+</body></html>
